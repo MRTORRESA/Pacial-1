@@ -1,0 +1,122 @@
+body 
+{ 
+  font-family: Verdana, "Lucida Grande", "Lucida Sans", "Trebuchet MS", Tahoma, sans-serif;
+  background:white; color:black; margin:0 
+}
+
+a:link, a:visited
+{
+  color: #000000;
+  text-decoration: none;
+}
+
+#adagio_page_header_level1 
+{
+  float: left;
+  background-color: white;
+  background-image: none; 
+  margin-top: auto;
+  height: auto;
+  clear: left;
+  }
+
+#adagio_page_header_level1 h1 
+{ 
+  background: url(Escudo_55x55.png) no-repeat scroll left center;
+  margin-top: 0.5em;
+  margin-bottom: auto;
+  width: auto;
+  height: 65px;
+  padding-top: 0;
+  }
+
+#adagio_page_header_level1 > h1 > a
+{
+  display: block;
+  padding: 0em;
+  overflow: visible;
+  width: auto;
+  height: auto;
+  padding: 10px 55px 0;
+  font-size: 60%;
+  font-weight: normal;
+}
+
+#adagio_page_navigation 
+{ 
+  display: none;
+}
+
+
+#adagio_page_header_level2,
+#adagio_page_header_level3,
+#adagio_page_header_level4
+{ 
+  display: block;
+  }
+
+#adagio_page_header_level2
+{ 
+  margin-left: 9em;
+  float: left;
+  margin-top: -4.5em;
+  font-size: 60%;
+  clear: left;
+  width: 300px;
+}
+
+#adagio_page_header_level3
+{ 
+  float: right;
+  margin-top: -5em;
+  clear: right;
+ }
+
+#adagio_page_header_level4 
+{ 
+  float: right;
+  margin-top: -3.5em;
+  font-size: 60%;
+  clear: right;
+  }
+
+#adagio_page_header_level3,
+#adagio_page_header_level4
+{ 
+  /* text-align: center; */
+ }
+
+#adagio_page_content
+{ 
+  padding-top: 1em;
+  clear:right;
+ }
+
+.toc 
+{
+  background-color: white;
+  border: thin solid black;
+  }
+
+#adagio_page_footer 
+{ 
+  background-color: #FFFFFF;
+  border-top: thin solid black;
+  border-bottom: thin solid black;
+  }
+
+/* Generic code fragment */
+pre.programlisting
+{
+  font-size: 1.0em;
+}
+
+.noprint
+{ 
+  display: none; 
+}
+
+.adagio_submit_form_duration_select
+{
+  display: none;
+}

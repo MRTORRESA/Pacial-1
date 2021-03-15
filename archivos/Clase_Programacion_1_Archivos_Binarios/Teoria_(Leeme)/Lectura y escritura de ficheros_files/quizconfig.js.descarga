@@ -1,0 +1,195 @@
+/*
+ * Script to grade, reset and show the solution of a set of multiple choice
+ * questions in a form. The functions receive the unique id label of the form,
+ * so that several forms may co-exist in the same document.
+ *
+ * Author: Abelardo Pardo (<abelardo.pardo@uc3m.es>)
+ *
+ */
+function gradeit(label, stylePrefix) {
+    /* Obtain the forms with the given label */
+    var formUnits = document.getElementsByName(label);
+    if (formUnits.length != 1) {
+        /* If more than one, notify and ignore function execution */
+        console.log(formUnits.length);
+        alert("Duplicated name '" + label + "' in document forms");
+        return;
+    } 
+    var formUnit = formUnits[0]; /* Get the form */ 
+    var divItems = formUnit.getElementsByTagName("div"); /* Get the div items */
+    /* String to encode the answers. It is a string of length 3:
+       <quesiton number><question answered><C/I, correct incorrect>. 
+       If no question was answered, then the last two characters are 00 */
+    var answerString = ""; 
+    var qIdx = 1; /* Counter for the question divs only */
+    var emptyClick = true; /* To detect empty answers */
+    /* Loop over all the div items, some are questions, some are not */
+    for (x = 0; x < divItems.length; x++) {
+        /* Get the class to detect the proper divs */
+        var classAtt = divItems[x].getAttribute("class");
+        /* If no class attribute or the wrong one, skip this div */
+        if (classAtt == null || classAtt.indexOf("adagio_quiz_question") == -1) {
+            continue;
+        }
+        /* Load the li elements (with the answers) */
+        var litems = divItems[x].getElementsByTagName("li");
+        /* Load the input elements inside the li */
+        var question = eval("document."+label+".question"+qIdx);
+        /* Index of the answer that has been checked */
+        answerIdx = -1;
+        /* Extend answer string with the index of the question */
+        answerString = answerString + qIdx;
+        /* Loop over the answers to see which one has been checked */
+        for (i = 0; i < question.length; i++) {
+            if (question[i].checked == true) {
+                /* Store the result of the question that has been checked */
+                isCorrect = question[i].value;
+                /* And its index to show the grading */
+                answerIdx = i;
+            }
+        }
+        /* Increase the index of the question being processed */
+        qIdx++;
+        /* If nothing has been marked, reflect it in the string and continue */
+        if (answerIdx == -1) {
+            answerString = answerString +  "00";
+            continue;
+        }
+        
+        /* At this point, one question has been answered */
+        emptyClick = false;
+        /* Loop over the answers to grade them. Need to traverse all of them
+         * because need to flip the grades in case it is a re-answer */
+        for (i = 0; i < question.length; i++) {
+            if (i == answerIdx) {
+                /* If it is the checked one, put the result */
+                if (isCorrect == "YES") {
+                    litems[answerIdx].style.backgroundImage="url(" + stylePrefix + 
+                                                            "Correct_32x32.png)";
+                    answerString = answerString + (i+1) + "C";
+                } else {
+                    litems[answerIdx].style.backgroundImage="url(" + stylePrefix + 
+                                                            "Incorrect_32x32.png)";
+                    answerString = answerString + (i+1) + "I";
+                }
+            } else {
+                /* If it is not checked, remove the grade */
+                litems[i].style.backgroundImage="none";
+            }
+        }
+    }
+
+    /* If no answer has been clicked, ignore the request to grade entirely */
+    if (emptyClick) {
+        return;
+    }
+
+    /* Prepare the answerString to be sent back to the server */
+
+    /* Create a bogus page name adding _bogus.html to the page name and attach
+     * the answer string as well as the id identifying the form */
+    var sPath = window.location.pathname;
+    var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
+    formUnit.setAttribute("action", sPage + "_bogus.html?form=" + 
+                          formUnit.name + "&answers=" + answerString);
+    formUnit.target=formUnit.name + "_response";
+    /* Perform the result submission. Catch the exception for the case in which
+     * there is no net connection */
+    try {
+        formUnit.submit();
+    } catch(err) {
+        /* Something fail while submitting, ignore */
+    }
+    /* Move to the second configuration in which the try again and solution
+     * buttons are the only ones visible */
+    formUnit.B1.style.display="none";
+    formUnit.B2.style.display="inline";
+    formUnit.B3.style.display="inline";
+}
+
+function resetit(label) {
+    /* Get all the forms in the document with the given label */
+    var formUnits = document.getElementsByName(label);
+    if (formUnits.length != 1) { 
+        /* If none or more than one, notify and terminate function */
+        alert("Duplicated name '" + label + "' in document forms");
+        return;
+    } 
+
+    /* Extract and traverse all divs in the form*/
+    var formUnit = formUnits[0];
+    var divItems = formUnit.getElementsByTagName("div");
+    for (x = 0; x < divItems.length; x++) {
+        /* Look at the class, if not the proper value, skip */
+        var classAtt = divItems[x].getAttribute("class");
+        if (classAtt == null || classAtt.indexOf("adagio_quiz_question") == -1) {
+            continue;
+        }
+        /* Get the list items (with the answers inside) */
+        var litems = formUnit.getElementsByTagName("li");
+        for (i = 0; i < litems.length; i++) {
+            /* Hide all the grades */
+            litems[i].style.backgroundImage="none";
+        }
+    }
+    /* Reset all the buttons in the form */
+    formUnit.reset();
+    /* And restore the view in which only the grade button is visible */
+    formUnit.B1.style.display="inline";
+    formUnit.B2.style.display="none";
+    formUnit.B3.style.display="none";
+}
+
+function showit(label, stylePrefix) {
+    /* Get the form with the given label and make sure it is unique */
+    var formUnits = document.getElementsByName(label);
+    if (formUnits.length != 1) { 
+        alert("Duplicated name '" + label + "' in document forms");
+        return;
+    } 
+
+    /* Get the divs in the form and traverse those with the right class */
+    var formUnit = formUnits[0];
+    var divItems = formUnit.getElementsByTagName("div");
+    var qIdx = 1;
+    for (x = 0; x < divItems.length; x++) {
+        /* If not the right class, skip */
+        var classAtt = divItems[x].getAttribute("class");
+        if (classAtt == null || classAtt.indexOf("adagio_quiz_question") == -1) {
+            continue;
+        }
+        /* Get the list items with the answers inside */
+        var litems = divItems[x].getElementsByTagName("li");
+        var question = eval("document."+label+".question"+qIdx);
+        
+        /* Traverse to show the solution of all of them */
+        for (i = 0; i < question.length; i++) {
+            if (question[i].value == "YES") {
+                litems[i].style.backgroundImage="url(" + stylePrefix + 
+                                                     "Correct_32x32.png)";
+            } else {
+                litems[i].style.backgroundImage="url(" + stylePrefix + 
+                                                "Incorrect_32x32.png)";
+            }
+        }
+        /* Increase the index of questions processed (different from the number
+         * of divs */
+        qIdx++;
+    }
+    
+    /* Prepare the destination of the form by appending _bogus.html to the page
+     * name */
+    var sPath = window.location.pathname;
+    var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
+    formUnit.setAttribute("action", sPage + "_bogus.html?form=" + 
+                          formUnit.name + "&showIt=1");
+    /* Redirect the response to the iframe that is hidden */
+    formUnit.target=formUnit.name + "_response";
+
+    /* Submit answer and catch exception in case there is no connectivity */
+    try {
+        formUnit.submit();
+    } catch(err) {
+        /* Something fail while submitting, ignore */
+    }
+}

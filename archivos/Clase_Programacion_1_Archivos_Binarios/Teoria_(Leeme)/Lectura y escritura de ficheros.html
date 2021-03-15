@@ -1,0 +1,1203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0053)http://www.it.uc3m.es/abel/as/MMC/L2/FilesDef_es.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Lectura y escritura de ficheros</title>
+    <meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+    <meta name="DC.title" content="Lectura y escritura de ficheros">
+    <meta name="DC.description" content="">
+    <meta name="DC.date" content="2012-1-12">
+    <meta name="DC.format" content="text/html">
+    <meta name="DC.language" content="es">
+    <meta name="DC.publisher" content="Universidad Carlos III de
+      Madrid">
+    <meta name="DC.creator" content="Pablo Basanta Val, Iria Estévez Ayres, Abelardo Pardo">
+    <link rel="shortcut icon" href="http://www.it.uc3m.es/abel/as/CSS/ae_64x64.png" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="http://www.it.uc3m.es/abel/as/CSS/ae_64x64.png" type="image/vnd.microsoft.icon">
+    <meta name="Author" content="Pablo Basanta Val, Iria Estévez Ayres,
+  Abelardo Pardo">
+    <meta name="language" content="es">
+    <link type="text/css" rel="stylesheet" href="./Lectura y escritura de ficheros_files/adagio_style.css" media="all">
+    <link type="text/css" rel="stylesheet" href="./Lectura y escritura de ficheros_files/as.css" media="all">
+    <link type="text/css" rel="stylesheet" href="./Lectura y escritura de ficheros_files/logos_es.css" media="all">
+    <link type="text/css" rel="stylesheet" href="./Lectura y escritura de ficheros_files/as_print.css" media="print">
+  </head>
+  <body id="adagioroot_filesdef">
+    <div id="adagio_body_container">
+      <div class="adagio_hidden_elements" id="skip_links">
+        <ul>
+          <li>
+            <a href="http://www.it.uc3m.es/abel/as/" accesskey="1">Inicio</a>
+          </li>
+          <li>
+            <a href="http://www.it.uc3m.es/abel/as/MMC/L2/FilesDef_es.html#adagio_page_content" accesskey="2">Ir a contenido</a>
+          </li>
+          <li>
+            <a href="http://www.it.uc3m.es/abel/as/MMC/L2/FilesDef_es.html#adagio_navigation" accesskey="3">Ir a navegación</a>
+          </li>
+        </ul>
+      </div>
+      <div id="adagio_page_header_level1">
+        <h1 id="adagio_institution_name">
+          <a href="http://www.uc3m.es/" title="Universidad Carlos III de
+      Madrid">Universidad Carlos III de
+      Madrid</a>
+        </h1>
+      </div>
+      <div id="adagio_page_header_level2">
+        <h2 id="adagio_degree_name">
+          <a href="http://www.uc3m.es/portal/page/portal/titulaciones_grado/rama_ing" title="Grado en
+      Ing. Telemática/Sist. Audiovisuales/Sist. de Comunicaciones">Grado en
+      Ing. Telemática/Sist. Audiovisuales/Sist. de Comunicaciones</a>
+        </h2>
+      </div>
+      <div id="adagio_page_header_level3">
+        <h3 id="adagio_course_name">
+          <a href="http://www.it.uc3m.es/as" title="Arquitectura de Sistemas">Arquitectura de Sistemas</a>
+        </h3>
+      </div>
+      <div id="adagio_page_header_level4">
+        <h4 id="adagio_course_edition">Septiembre 2011 - Enero 2012</h4>
+      </div>
+      <div id="adagio_page_navigation">
+        <a name="adagio_navigation" id="adagio_navigation"></a>
+        <ul xmlns="">
+          <li>
+            <b>Fall 2011 Edition</b>
+          </li>
+          <li>
+            <a href="http://www.it.uc3m.es/abel/as/info/material_es.html">Material</a>
+          </li>
+          <li>
+            <a href="http://www.it.uc3m.es/abel/as/info/schedule_es.html">Calendario</a>
+          </li>
+          <li>
+            <a href="http://www.it.uc3m.es/abel/as/info/syllabus_es.html">Sobre el curso</a>
+          </li>
+          <li>
+            <a href="http://www.it.uc3m.es/abel/as/info/professors_es.html">Profesores</a>
+          </li>
+          <li>
+            <a href="https://aulaglobal2.uc3m.es/">Aula Global</a>
+          </li>
+          <li>
+            <a href="http://www.it.uc3m.es/abel/as/MMC/L2/bogus.htm" onclick="window.print();return false">Imprimir</a>
+          </li>
+        </ul>
+      </div>
+      <div id="adagio_page_content">
+        <a name="adagio_page_content_anchor" id="adagio_page_content_anchor"></a>
+        <div class="chapter" title="Lectura y escritura de ficheros" id="filesdef">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h2 class="title">
+    <span xml:lang="es" lang="es">Lectura y escritura de ficheros</span>
+    
+  </h2>
+              </div>
+            </div>
+          </div>
+          <div class="toc">
+            <p>
+              <b>Tabla de contenidos</b>
+            </p>
+            <dl>
+              <dt>
+                <span class="section">
+                  <a href="http://www.it.uc3m.es/abel/as/MMC/L2/FilesDef_es.html#id20409850">1. 
+      <span xml:lang="es" lang="es">Introducción</span>
+      
+    </a>
+                </span>
+              </dt>
+              <dd>
+                <dl>
+                  <dt>
+                    <span class="section">
+                      <a href="http://www.it.uc3m.es/abel/as/MMC/L2/FilesDef_es.html#id20409835">1.1. 
+	    <span xml:lang="es" lang="es">Qué es un fichero</span>
+	    
+      </a>
+                    </span>
+                  </dt>
+                  <dt>
+                    <span class="section">
+                      <a href="http://www.it.uc3m.es/abel/as/MMC/L2/FilesDef_es.html#id20409683">1.2. 
+	    <span xml:lang="es" lang="es">Qué es un flujo o <em><span class="remark">stream</span></em></span>
+	    
+      </a>
+                    </span>
+                  </dt>
+                  <dt>
+                    <span class="section">
+                      <a href="http://www.it.uc3m.es/abel/as/MMC/L2/FilesDef_es.html#id20410158">1.3. 
+        <span xml:lang="es" lang="es">E/S mediante buffers</span>
+	    
+      </a>
+                    </span>
+                  </dt>
+                  <dt>
+                    <span class="section">
+                      <a href="http://www.it.uc3m.es/abel/as/MMC/L2/FilesDef_es.html#id20409997">1.4. 
+        <span xml:lang="es" lang="es">Comportamiento del modelo E/S</span>
+	    
+      </a>
+                    </span>
+                  </dt>
+                </dl>
+              </dd>
+              <dt>
+                <span class="section">
+                  <a href="http://www.it.uc3m.es/abel/as/MMC/L2/FilesDef_es.html#id20409879">2. 
+      <span xml:lang="es" lang="es">Funciones básicas</span>
+      
+    </a>
+                </span>
+              </dt>
+              <dd>
+                <dl>
+                  <dt>
+                    <span class="section">
+                      <a href="http://www.it.uc3m.es/abel/as/MMC/L2/FilesDef_es.html#id20409696">2.1. 
+        <span xml:lang="es" lang="es">Punteros a <code class="code">FILE</code></span>
+        
+      </a>
+                    </span>
+                  </dt>
+                  <dt>
+                    <span class="section">
+                      <a href="http://www.it.uc3m.es/abel/as/MMC/L2/FilesDef_es.html#id20410616">2.2. 
+        <span xml:lang="es" lang="es">Abriendo un fichero</span>
+        
+      </a>
+                    </span>
+                  </dt>
+                  <dt>
+                    <span class="section">
+                      <a href="http://www.it.uc3m.es/abel/as/MMC/L2/FilesDef_es.html#id20411032">2.3. 
+        <span xml:lang="es" lang="es">Cerrando un fichero</span>
+        
+      </a>
+                    </span>
+                  </dt>
+                  <dt>
+                    <span class="section">
+                      <a href="http://www.it.uc3m.es/abel/as/MMC/L2/FilesDef_es.html#id20410865">2.4. 
+        <span xml:lang="es" lang="es">Abriendo un fichero con un descriptor</span>
+        
+      </a>
+                    </span>
+                  </dt>
+                </dl>
+              </dd>
+              <dt>
+                <span class="section">
+                  <a href="http://www.it.uc3m.es/abel/as/MMC/L2/FilesDef_es.html#id20410732">3. 
+      <span xml:lang="es" lang="es">Lectura y escritura de ficheros</span>
+      
+    </a>
+                </span>
+              </dt>
+              <dd>
+                <dl>
+                  <dt>
+                    <span class="section">
+                      <a href="http://www.it.uc3m.es/abel/as/MMC/L2/FilesDef_es.html#id20410079">3.1. 
+        <span xml:lang="es" lang="es">Lectura/Escritura por bloques</span>
+        
+      </a>
+                    </span>
+                  </dt>
+                </dl>
+              </dd>
+              <dt>
+                <span class="section">
+                  <a href="http://www.it.uc3m.es/abel/as/MMC/L2/FilesDef_es.html#id20410653">4. 
+      <span xml:lang="es" lang="es">Acceso aleatorio a ficheros</span>
+      
+    </a>
+                </span>
+              </dt>
+              <dt>
+                <span class="section">
+                  <a href="http://www.it.uc3m.es/abel/as/MMC/L2/FilesDef_es.html#id20410934">5. 
+      <span xml:lang="es" lang="es">Manipulación directa de ficheros</span>
+      
+    </a>
+                </span>
+              </dt>
+              <dt>
+                <span class="section">
+                  <a href="http://www.it.uc3m.es/abel/as/MMC/L2/FilesDef_es.html#id20409930">6. <span xml:lang="es" lang="es">Autoevaluación automática</span>
+    </a>
+                </span>
+              </dt>
+            </dl>
+          </div>
+          <div class="section" title="1. Introducción">
+            <div class="titlepage">
+              <div>
+                <div>
+                  <h2 class="title" id="id20409850">1. 
+      <span xml:lang="es" lang="es">Introducción</span>
+      
+    </h2>
+                </div>
+              </div>
+            </div>
+            <p xml:lang="es" lang="es">
+      C ofrece un conjunto de funciones para realizar operaciones de entrada y 
+      salida (E/S) con las cuales puedes leer y escribir cualquier tipo de 
+      fichero. Antes de ver estas funciones, hay que entender algunos conceptos 
+      básicos.
+    </p>
+            <div class="section" title="1.1. Qué es un fichero">
+              <div class="titlepage">
+                <div>
+                  <div>
+                    <h3 class="title" id="id20409835">1.1. 
+	    <span xml:lang="es" lang="es">Qué es un fichero</span>
+	    
+      </h3>
+                  </div>
+                </div>
+              </div>
+              <p xml:lang="es" lang="es">
+        En C, un <em><span class="remark">fichero</span></em> se puede referir a un fichero en 
+        disco, a un terminal, a una impresora, etc. Dicho de otro modo, un 
+        fichero representa un dispositivo concreto con el que puedes 
+        intercambiar información. Antes de poder trabajar con un fichero, tienes 
+        que abrir ese fichero. Tras terminar el intercambio de información, debes
+        cerrar el fichero que abriste.
+      </p>
+            </div>
+            <div class="section" title="1.2. Qué es un flujo o stream">
+              <div class="titlepage">
+                <div>
+                  <div>
+                    <h3 class="title" id="id20409683">1.2. 
+	    <span xml:lang="es" lang="es">Qué es un flujo o <em><span class="remark">stream</span></em></span>
+	    
+      </h3>
+                  </div>
+                </div>
+              </div>
+              <p xml:lang="es" lang="es">      
+        El conjunto datos que transfieres desde un programa a un fichero, o al 
+        revés, se le conoce como <em><span class="remark">flujo</span></em> 
+        (<em><span class="remark">stream</span></em> en inglés), y consiste en una serie de 
+        bytes (o caracteres). 
+        A diferencia de un fichero, que se refiere a un dispositivo concreto de 
+        E/S, un flujo es independiente del dispositivo.
+        Es decir, todos los flujos tienen el mismo comportamiento 
+        independientemente del dispositivo al que esté asociado. 
+        De esta manera puedes realizar operaciones E/S con tan sólo asociar un 
+        flujo a un fichero.
+      </p>
+              <p xml:lang="es" lang="es">
+        Hay dos tipos de flujos. Uno es el <em><span class="remark">flujo de texto</span></em>,
+        consistente en líneas de texto. Una línea es una secuencia de caracteres
+        terminada en el carácter de línea nueva (<code class="code">'\n'</code> ó 
+        <code class="code">'\r\n'</code>). El otro formato es el del 
+        <em><span class="remark">flujo binario</span></em>, que consiste en una secuencia de 
+        bytes que representan datos internos como números, 
+        estructuras o arrays.
+        Se utiliza principalmente para datos que no son de tipo texto, 
+        donde no importa la apariencia de esos datos en el fichero (da 
+        igual que no se vean "en bonito", como podría verse en un fichero de 
+        texto).
+      </p>
+            </div>
+            <div class="section" title="1.3. E/S mediante buffers">
+              <div class="titlepage">
+                <div>
+                  <div>
+                    <h3 class="title" id="id20410158">1.3. 
+        <span xml:lang="es" lang="es">E/S mediante buffers</span>
+	    
+      </h3>
+                  </div>
+                </div>
+              </div>
+              <p xml:lang="es" lang="es">
+        Una porción de memoria que se usa temporalmente para almacenar datos 
+        antes de ser enviados a su destino se llama 
+        <em><span class="remark">buffer</span></em>. Con ayuda de los buffers, el sistema 
+	    operativo puede mejorar su eficiencia reduciendo el número de accesos 
+	    a efectuar en un  dispositivo de E/S (es decir, en un fichero).     	 
+      </p>
+              <p xml:lang="es" lang="es">
+      	El acceso a disco o a otros dispositivos de E/S suele ser más lento que a 
+        memoria de acceso directo; por eso, si varias operaciones E/S se 
+        realizan en un buffer en vez de en el fichero en sí, el 
+        funcionamiento de un programa es más eficiente. Por ejemplo, si se 
+        envían varias operaciones de escritura a un buffer, las 
+        modificaciones de esos datos escritos se quedan en memoria hasta que 
+        es hora de guardarlas, que es cuando esos datos se llevan al 
+        dispositivo real (a este proceso se le conoce como 
+		<em><span class="remark">flushing</span></em>).
+      </p>
+              <p xml:lang="es" lang="es">
+        Por defecto, todas las operaciones de los flujos E/S en C son 
+        con buffer.
+      </p>
+            </div>
+            <div class="section" title="1.4. Comportamiento del modelo E/S">
+              <div class="titlepage">
+                <div>
+                  <div>
+                    <h3 class="title" id="id20409997">1.4. 
+        <span xml:lang="es" lang="es">Comportamiento del modelo E/S</span>
+	    
+      </h3>
+                  </div>
+                </div>
+              </div>
+              <p xml:lang="es" lang="es">
+        Ya que la unidad más pequeña que se puede representar en C es un 
+        caracter, se puede acceder a un fichero desde cualquiera de sus 
+        caracteres (o bytes, que es lo mismo). Se puede leer o escribir 
+        cualquier número de caracteres desde un punto móvil, conocido como el 
+        <em><span class="remark">indicador de posición de fichero</span></em>. Los caracteres 
+        se leen o escriben en secuencia desde ese punto, y el indicador se va 
+        moviendo de acuerdo a eso. El indicador se coloca al principio del 
+        fichero cuando éste se abre, pero luego se puede mover a cualquier 
+        punto explícitamente (no sólo porque se haya leído o escrito algo).        
+      </p>
+            </div>
+          </div>
+          <div class="section" title="2. Funciones básicas">
+            <div class="titlepage">
+              <div>
+                <div>
+                  <h2 class="title" id="id20409879">2. 
+      <span xml:lang="es" lang="es">Funciones básicas</span>
+      
+    </h2>
+                </div>
+              </div>
+            </div>
+            <p xml:lang="es" lang="es">
+      Vamos a centrarnos en cómo abrir y cerrar ficheros y en cómo interpretar 
+      los mensajes de error que pueden dar estas dos operaciones.
+    </p>
+            <div class="section" title="2.1. Punteros a FILE">
+              <div class="titlepage">
+                <div>
+                  <div>
+                    <h3 class="title" id="id20409696">2.1. 
+        <span xml:lang="es" lang="es">Punteros a <code class="code">FILE</code></span>
+        
+      </h3>
+                  </div>
+                </div>
+              </div>
+              <p xml:lang="es" lang="es">
+        La estructura <code class="code">FILE</code> es la estructura que controla los 
+	    ficheros y se encuentra en la cabecera <code class="code">stdio.h</code>. Los flujos
+	    utilizan estos punteros a ficheros para realizar las operaciones E/S. La 
+	    siguiente línea de código declara una variable de tipo puntero a 
+	    fichero:	
+      </p>
+              <pre xml:lang="es" class="programlisting" lang="es">FILE *ptr_fich;</pre>
+              <p xml:lang="es" lang="es">
+      	En la estructura <code class="code">FILE</code> es donde se encuentra el atributo que  
+	 	representa el indicador de posición de fichero.	
+      </p>
+            </div>
+            <div class="section" title="2.2. Abriendo un fichero">
+              <div class="titlepage">
+                <div>
+                  <div>
+                    <h3 class="title" id="id20410616">2.2. 
+        <span xml:lang="es" lang="es">Abriendo un fichero</span>
+        
+      </h3>
+                  </div>
+                </div>
+              </div>
+              <p xml:lang="es" lang="es">
+        La función <code class="code">fopen</code> abre un fichero y lo asocia a un flujo.
+	    Necesitas especificar como argumentos el nombre de ese fichero (o la 
+	    ruta y el nombre) y el modo de apertura. 
+      </p>
+              <pre class="programlisting">#include &lt;stdio.h&gt;
+FILE *fopen(const char *filename, const char *mode);</pre>
+              <p xml:lang="es" lang="es">
+	    Aquí <code class="code">filename</code> es un puntero a <code class="code">char</code> que 
+	    referencia un string con el nombre del fichero. <code class="code">mode</code> 
+	    apunta a otro string que especifica la manera en la que se va a abrir 
+	    el fichero. La función <code class="code">fopen</code> devuelve un puntero de tipo
+	    <code class="code">FILE</code>. Si ha ocurrido algún error al abrirse, devuelve 
+	    <code class="code">NULL</code>.
+      </p>
+              <p xml:lang="es" lang="es">
+        El parámetro <code class="code">mode</code> es una combinación de los caracteres 
+	    <code class="code">r</code> (<em><span class="remark">read</span></em>, lectura), <code class="code">w</code> 
+	    (<em><span class="remark">write</span></em>, escritura), <code class="code">b</code> (binario), 
+	    <code class="code">a</code> (<em><span class="remark">append</span></em>, añadir), y <code class="code">+</code> 
+	    (actualizar). Si usas el caracter <code class="code">a</code> y el 
+	    fichero existe, el contenido de ese fichero se mantiene y los datos 
+	    nuevos se añaden justo al final, tras el último dato que ya estuviera 
+	    escrito (el indicador de fichero pues no está situado al inicio del 
+	    fichero, sino que en este caso está al final). 
+	    Si el fichero no existe, lo crea. Con <code class="code">w</code> es 
+	    diferente; este modo siempre borra los datos del fichero si existe (si 
+	    no, crea uno nuevo). Si al modo le añades el <code class="code">+</code>, permite 
+	    que el fichero se abra para escritura o lectura y puedes modificar 
+	    cualquier dato que hubiera en él. Si usas <code class="code">r</code>, el fichero 
+	    debe existir; si no, <code class="code">fopen</code> dará error y te devolverá 
+	    <code class="code">NULL</code>.
+      </p>
+              <p xml:lang="es" lang="es">
+        La siguiente lista muestra los posibles modos de abrir un fichero:
+      </p>
+              <div class="itemizedlist">
+                <ul class="itemizedlist">
+                  <li class="listitem">
+                    <p xml:lang="es" lang="es">
+	        <code class="code">"r"</code> abre un fichero de texto existente para lectura.
+	      </p>
+                  </li>
+                  <li class="listitem">
+                    <p xml:lang="es" lang="es">
+	        <code class="code">"w"</code> crea un fichero de texto para escritura.
+	      </p>
+                  </li>
+                  <li class="listitem">
+                    <p xml:lang="es" lang="es">
+	        <code class="code">"a"</code> abre un fichero de texto existente para añadir datos.
+	      </p>
+                  </li>
+                  <li class="listitem">
+                    <p xml:lang="es" lang="es">
+	        <code class="code">"r+"</code> abre un fichero de texto existente para lectura o 
+	        escritura.
+	      </p>
+                  </li>
+                  <li class="listitem">
+                    <p xml:lang="es" lang="es">
+	        <code class="code">"w+"</code> crea un fichero de texto para lectura o escritura.
+	      </p>
+                  </li>
+                  <li class="listitem">
+                    <p xml:lang="es" lang="es">
+	        <code class="code">"a+"</code> abre o crea un fichero de texto para añadirle datos.
+	      </p>
+                  </li>
+                  <li class="listitem">
+                    <p xml:lang="es" lang="es">
+	        <code class="code">"rb"</code> abre un fichero binario existente para lectura.
+	      </p>
+                  </li>
+                  <li class="listitem">
+                    <p xml:lang="es" lang="es">
+	        <code class="code">"wb"</code> crea un fichero binario para escritura.
+	      </p>
+                  </li>
+                  <li class="listitem">
+                    <p xml:lang="es" lang="es">
+	        <code class="code">"ab"</code> abre un fichero binario existente para añadir datos.
+	      </p>
+                  </li>
+                  <li class="listitem">
+                    <p xml:lang="es" lang="es">
+	        <code class="code">"r+b"</code> abre un fichero binario existente para lectura 
+	        o escritura.
+	      </p>
+                  </li>
+                  <li class="listitem">
+                    <p xml:lang="es" lang="es">
+	        <code class="code">"w+b"</code> crea un fichero binario para lectura o escritura.
+	      </p>
+                  </li>
+                  <li class="listitem">
+                    <p xml:lang="es" lang="es">
+	        <code class="code">"a+b"</code> abre o crea un fichero binario para añadirle datos.
+	      </p>
+                  </li>
+                </ul>
+              </div>
+              <p xml:lang="es" lang="es">
+        A veces podrás ver que el modo está escrito como <code class="code">"rb+"</code> en 
+	    vez de <code class="code">"r+b"</code>, por ejemplo, pero es equivalente.
+      </p>
+            </div>
+            <div class="section" title="2.3. Cerrando un fichero">
+              <div class="titlepage">
+                <div>
+                  <div>
+                    <h3 class="title" id="id20411032">2.3. 
+        <span xml:lang="es" lang="es">Cerrando un fichero</span>
+        
+      </h3>
+                  </div>
+                </div>
+              </div>
+              <p xml:lang="es" lang="es">
+        Después de abrir un fichero y leerlo o escribir en él, hay que 
+        desenlazarlo del flujo de datos al que fue asociado. Esto se hace con 
+        la función <code class="code">fclose</code>, cuya sintaxis es la siguiente:
+      </p>
+              <pre class="programlisting">#include &lt;stdio.h&gt;
+int fclose(FILE *stream);</pre>
+              <p xml:lang="es" lang="es">
+        Si <code class="code">fclose</code> cierra bien el fichero, devuelve 
+	    <code class="code">0</code>. Si no, la función devuelve <code class="code">EOF</code>. 
+        Normalmente sólo falla si se ha borrado el fichero antes de intentar 
+	    cerrarlo. Acuérdate siempre de cerrar el fichero. Si no lo haces, se 
+	    pueden perder los datos almacenados en él. Además, si no lo cierras, 
+	    otros programas pueden tener problemas si lo quieren abrir más tarde.
+      </p>
+              <p xml:lang="es" lang="es">
+        El siguiente programa abre y cierra un fichero de texto, comprobando 
+        los posibles errores que puedan surgir:
+      </p>
+              <div class="informaltable">
+                <table border="1">
+                  <colgroup>
+                    <col align="center">
+                    <col align="left">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <td align="center">
+                        <pre class="programlisting">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+</pre>
+                      </td>
+                      <td align="left">
+                        <pre class="programlisting">#include &lt;stdio.h&gt;
+
+enum {EXITO, FALLO};
+int main(void)
+{
+  FILE *ptr_fichero;
+  char nombre_fichero[] = "resumen.txt";
+  int resultado = EXITO;
+
+  if ( (ptr_fichero = fopen(nombre_fichero, "r") ) == NULL) 
+  {
+    printf("No se ha podido abrir el fichero %s.\n", nombre_fichero);
+    resultado = FALLO;
+  }
+  else 
+  {
+    printf("Abierto fichero; listos para cerrarlo.\n");
+    if (fclose(ptr_fichero)!=0) 
+    {
+      printf("No se ha podido cerrar el fichero %s.\n", nombre_fichero);
+      resultado = FALLO;
+    }
+  }
+  return resultado;
+}
+</pre>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="section" title="2.4. Abriendo un fichero con un descriptor">
+              <div class="titlepage">
+                <div>
+                  <div>
+                    <h3 class="title" id="id20410865">2.4. 
+        <span xml:lang="es" lang="es">Abriendo un fichero con un descriptor</span>
+        
+      </h3>
+                  </div>
+                </div>
+              </div>
+              <p xml:lang="es" lang="es">
+        Para poder abrir un fichero dado su descriptor de fichero (
+	    <em><span class="remark">file descriptor (fd)</span></em> en inglés) se ha de usar la 
+	    función <code class="code">fdopen</code>. Esta función se comporta como la función 
+	    <code class="code">fopen</code>, pero en vez de abrir un fichero dado su nombre, 
+	    usa el identificador de fichero para abrirlo:
+      </p>
+              <pre class="programlisting">#include &lt;stdio.h&gt;
+int fdopen(int fildes, const char *mode);</pre>
+              <p xml:lang="es" lang="es"> 
+        Una forma de conseguir un descriptor para un fichero es con la 
+	    función <code class="code">mkstemp</code>:
+      </p>
+              <pre class="programlisting">#include &lt;stdio.h&gt;
+int mkstemp(char *template);</pre>
+              <p xml:lang="es" lang="es">
+        Esta función genera un nombre de fichero temporal único a partir del 
+	    string <code class="code">template</code>. Los últimos seis caracteres de 
+	    <code class="code">template</code> deben ser <code class="code">“XXXXXX”</code>, que son 
+	    reemplazados luego por <code class="code">mkstemp</code> con una cadena que hace 
+	    que el nombre  no esté repetido. Ya que será modificada, 
+	    <code class="code">template</code> no debe ser definida como constante. 
+	    La función <code class="code">mkstemp</code> devuelve el 
+	    descriptor de fichero del fichero temporal creado o <code class="code">-1</code> en 
+	    caso de error. 
+      </p>
+            </div>
+          </div>
+          <div class="section" title="3. Lectura y escritura de ficheros">
+            <div class="titlepage">
+              <div>
+                <div>
+                  <h2 class="title" id="id20410732">3. 
+      <span xml:lang="es" lang="es">Lectura y escritura de ficheros</span>
+      
+    </h2>
+                </div>
+              </div>
+            </div>
+            <p xml:lang="es" lang="es">
+	  En C puedes realizar las operaciones de lectura y escritura de varias 
+	  maneras:
+    </p>
+            <div class="itemizedlist">
+              <ul class="itemizedlist">
+                <li class="listitem">
+                  <p xml:lang="es" lang="es">
+	      Leer y escribir carácter a carácter (o lo que es lo mismo,
+	      byte a byte), con funciones como 
+	      <code class="code">fgetc</code> y <code class="code">fputc</code>.
+	    </p>
+                </li>
+                <li class="listitem">
+                  <p xml:lang="es" lang="es">
+		  Leer y escribir línea a línea, con funciones como 
+		  <code class="code">fgets</code> y <code class="code">fputs</code>.
+	    </p>
+                </li>
+                <li class="listitem">
+                  <p xml:lang="es" lang="es">
+	      Leer y escribir un bloque de caracteres (o bytes) cada vez,
+	      con <code class="code">fread</code> y <code class="code">fwrite</code>.
+	    </p>
+                </li>
+              </ul>
+            </div>
+            <p xml:lang="es" lang="es">
+      Para este curso nos vamos a centrar en la última, la lectura por bloques,
+      que nos será útil tanto para ficheros de texto como para binarios.
+    </p>
+            <div class="section" title="3.1. Lectura/Escritura por bloques">
+              <div class="titlepage">
+                <div>
+                  <div>
+                    <h3 class="title" id="id20410079">3.1. 
+        <span xml:lang="es" lang="es">Lectura/Escritura por bloques</span>
+        
+      </h3>
+                  </div>
+                </div>
+              </div>
+              <p xml:lang="es" lang="es">
+	    En C contamos con las funciones <code class="code">fread</code> y 
+	    <code class="code">fwrite</code> para realizar operaciones E/S por bloques.
+      </p>
+              <p xml:lang="es" lang="es">
+        La sintaxis de <code class="code">fread</code> es la siguiente:
+      </p>
+              <pre class="programlisting">#include &lt;stdio.h&gt;
+size_t fread(void *ptr, size_t size, size_t n, FILE *stream);</pre>
+              <p xml:lang="es" lang="es">
+	    Aquí <code class="code">ptr</code> es un array donde se van a almacenar 
+	    los datos que se van a leer.
+	    <code class="code">size</code> indica el tamaño de cada elemento del array. 
+	    <code class="code">n</code> especifica el número de elementos que se van a leer.
+	    <code class="code">stream</code> es un puntero a un fichero que ha tenido que haber 
+	    sido abierto previamente.
+	    <code class="code">size_t</code> es un tipo que está definido también en la cabecera 
+	    <code class="code">stdio.h</code>. 
+	    La función devuelve el número de elementos que realmente se han leído
+	    (que puede ser menor que <code class="code">n</code>); si 
+	    todo ha ido bien o aún no se ha llegado al final del fichero, ese 
+	    número devuelto debería ser mayor que 0 e igual o menor (en caso de que 
+	    no sepamos la longitud de lo que vamos a leer) que el tercer argumento, 
+	    <code class="code">n</code>.	    
+      </p>
+              <p xml:lang="es" lang="es">	      
+        Si obtenemos un error, habrá que distinguir si se produjo porque 
+        llegamos al final del fichero o por alguna otra causa; para ello 
+        contamos con las funciones <code class="code">feof</code> y 
+        <code class="code">ferror</code>, que veremos a continuación.        
+	  </p>
+              <p xml:lang="es" lang="es">
+        La sintaxis de <code class="code">fwrite</code> es la siguiente:
+      </p>
+              <pre class="programlisting">#include &lt;stdio.h&gt;
+size_t fwrite(const void *ptr, size_t size, size_t n, FILE *stream);</pre>
+              <p xml:lang="es" lang="es">
+	    <code class="code">ptr</code> hace referencia a un array con los datos que se van a 
+	    escribir al fichero abierto apuntado por <code class="code">stream</code>.
+	    <code class="code">size</code> indica el tamaño de cada elemento del array. 
+	    <code class="code">n</code> especifica el número de elementos que se van a escribir.
+	    <code class="code">stream</code> es un puntero a un fichero que ha tenido que haber 
+	    sido abierto previamente.
+	    La función devuelve el número de elementos que se han escrito; luego si
+	    no ha habido ningún error, ese número devuelto debería ser igual que el
+	    tercer argumento, <code class="code">n</code>. El valor devuelto puede ser menos que
+	    este <code class="code">n</code> si ha habido algún error.
+      </p>
+              <p xml:lang="es" lang="es">
+        Como se ha comentado anteriormente, tenemos la función <code class="code">feof</code>, 
+        que se usa para saber cuándo hemos llegado al final del fichero:
+      </p>
+              <pre class="programlisting">#include &lt;stdio.h&gt;
+int feof(FILE *stream);</pre>
+              <p xml:lang="es" lang="es">
+	    Esta función devuelve <code class="code">0</code> si aún no se ha llegado al final 
+	    del fichero. Si se ha llegado, devuelve un entero distinto de cero. 
+      </p>
+              <p xml:lang="es" lang="es">
+        Finalmente, contamos con la función <code class="code">ferror</code> para saber si 
+        ha ocurrido algún error en la lectura o escritura, que devolverá 
+        <code class="code">0</code> si no ha ocurrido ninguno y un valor distinto de cero 
+        en caso contrario:
+      </p>
+              <pre class="programlisting">#include &lt;stdio.h&gt;
+int ferror(FILE *stream);</pre>
+              <p xml:lang="es" lang="es">
+        El siguiente programa va leyendo un fichero de bloque en bloque y escribe 
+        dichos bloques a un fichero de salida.
+      </p>
+              <div class="informaltable">
+                <table border="1">
+                  <colgroup>
+                    <col align="center">
+                    <col align="left">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <td align="center">
+                        <pre class="programlisting">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+</pre>
+                      </td>
+                      <td align="left">
+                        <pre class="programlisting">﻿#include &lt;stdio.h&gt;
+
+enum {EXITO, FALLO, LONGITUD_MAXIMA = 80};
+
+int error_msg(char *nombre_fichero) 
+{
+	printf("Falló algo con el fichero %s.\n", nombre_fichero);
+	return FALLO;
+}
+
+int main(void)
+{
+  FILE *ptr_fich1, *fich_ptr2;
+  char nombre_fich1[] = "copia_resumen.txt";
+  char nombre_fich2[] = "resumen.txt";
+  int resultado = EXITO;
+
+  if ( (ptr_fich1 = fopen(nombre_fich1, "w")) == NULL ) 
+  {
+    resultado = error_msg(nombre_fich1);
+  }
+  else 
+  {
+    if ( (ptr_fich2 = fopen(nombre_fich2, "r")) == NULL ) 
+    {
+      resultado = error_msg(nombre_fich2);
+    }
+    else 
+    {
+      int num;
+      char buffer[LONGITUD_MAXIMA + 1];
+      while(!feof(ptr_fich2)) 
+      {
+        num = fread(buffer,sizeof(char), LONGITUD_MAXIMA, ptr_fich2);
+        buffer[num*sizeof(char)] = '\0';
+        printf("%s.",buffer);
+        if (fwrite(buffer, sizeof(char), num, ptr_fich1) != num) 
+        {
+          resultado = error_msg(nombre_fich1);
+          break;
+        }
+      } //end of while
+      printf("\n");
+      if (fclose(ptr_fich2)!=0) 
+      {
+        resultado = error_msg(nombre_fich2);
+      }
+    }
+    if (fclose(ptr_fich2)!=0) 
+    {
+      resultado = error_msg(nombre_fich1);
+    }
+  }
+  return resultado;
+}
+</pre>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p xml:lang="es" lang="es">
+	    El buffer declarado en la línea 31 tiene <code class="code">LONGITUD_MAXIMA + 1</code> 
+	    elementos, aunque sólo leemos <code class="code">LONGITUD_MAXIMA</code> elementos por 
+	    bloque. Esto es así porque necesitamos añadir en la línea 35 el 
+	    carácter de terminación, para que <code class="code">buffer</code> sea considerado
+	    como un string y la función <code class="code">printf</code> pueda imprimirlo 
+	    correctamente, sin lugar a errores.
+      </p>
+            </div>
+          </div>
+          <div class="section" title="4. Acceso aleatorio a ficheros">
+            <div class="titlepage">
+              <div>
+                <div>
+                  <h2 class="title" id="id20410653">4. 
+      <span xml:lang="es" lang="es">Acceso aleatorio a ficheros</span>
+      
+    </h2>
+                </div>
+              </div>
+            </div>
+            <p xml:lang="es" lang="es"> 
+	  En la sección anterior hemos visto cómo leer y escribir datos de manera 
+	  secuencial. En algunos casos, sin embargo, se necesita acceder a una 
+	  parte específica en mitad de un fichero. Para eso contamos con las 
+	  funciones, <code class="code">fseek</code>, <code class="code">ftell</code> y 
+	  <code class="code">rewind</code>, que permiten realizar accesos aleatorios.
+    </p>
+            <p xml:lang="es" lang="es"> 
+	  La función <code class="code">fseek</code> permite desplazar el indicador de posición
+	  de fichero al sitio desde donde el cual quieres acceder al fichero. 
+	  La sintaxis es:
+    </p>
+            <pre class="programlisting">#include &lt;stdio.h&gt;
+int fseek(FILE *stream, long offset, int whence);</pre>
+            <p xml:lang="es" lang="es">
+      <code class="code">stream</code> es el puntero asociado con el fichero abierto. 
+      <code class="code">offset</code> indica el número de bytes que se va a desplazar
+      el indicador desde una posición especificada por <code class="code">whence</code>, 
+      que puede tener uno de los siguientes valores: <code class="code">SEEK_SET</code>, 
+      <code class="code">SEEK_CUR</code> y <code class="code">SEEK_END</code>. Si todo va bien, la 
+      función devuelve <code class="code">0</code>; si no, devuelve un valor distinto de 
+      cero.
+    </p>
+            <p xml:lang="es" lang="es">
+      Si se utiliza <code class="code">SEEK_SET</code>, el desplazamiento se realizará 
+      desde el principio del fichero, y el tamaño de <code class="code">offset</code> deberá
+      ser mayor o igual que cero. Si se usa <code class="code">SEEK_END</code>, el 
+      desplazamiento se realizará desde el final del fichero, y el valor de 
+      <code class="code">offset</code> tendrá que ser negativo. Si se usa 
+      <code class="code">SEEK_CUR</code>, el desplazamiento se calcula desde la posición 
+      actual del indicador de posición de fichero.
+    </p>
+            <p xml:lang="es" lang="es">
+	  Puedes obtener el valor actual del indicador de posición de fichero 
+	  llamando a <code class="code">ftell</code>:
+    </p>
+            <pre class="programlisting">#include &lt;stdio.h&gt;
+int ftell(FILE *stream);</pre>
+            <p xml:lang="es" lang="es">
+	  El valor que devuelve <code class="code">ftell</code> representa el número de 
+	  bytes desde el principio del fichero hasta donde nos encontramos
+	  en ese momento (sitio indicado por el indicador de posición). 
+	  Si la función falla, devuelve 
+	  <code class="code">-1L</code> (es decir, el valor largo (<code class="code">long</code>) de 
+	  menos 1).
+    </p>
+            <p xml:lang="es" lang="es">
+      A veces te interesará reiniciar el indicador de posición de fichero y 
+      llevarlo al inicio del mismo. Para esto cuentas con la función 
+      <code class="code">rewind</code>:
+    </p>
+            <pre class="programlisting">#include &lt;stdio.h&gt;
+void rewind(FILE *stream);</pre>
+            <p xml:lang="es" lang="es">
+      De esta manera, la siguiente línea de código:
+    </p>
+            <pre xml:lang="es" class="programlisting" lang="es">rewind(ptr_fich);</pre>
+            <p xml:lang="es" lang="es">
+      es equivalente a esta otra:
+    </p>
+            <pre xml:lang="es" class="programlisting" lang="es">fseek(ptr_fich,0L,SEEK_SET);</pre>
+          </div>
+          <div class="section" title="5. Manipulación directa de ficheros">
+            <div class="titlepage">
+              <div>
+                <div>
+                  <h2 class="title" id="id20410934">5. 
+      <span xml:lang="es" lang="es">Manipulación directa de ficheros</span>
+      
+    </h2>
+                </div>
+              </div>
+            </div>
+            <p xml:lang="es" lang="es">
+      Existen otra serie de funciones adicionales para manejar ficheros que 
+      puede que te sean útiles. 
+    </p>
+            <p xml:lang="es" lang="es">
+    	La función <code class="code">remove</code> que, dado el nombre de un fichero, lo 
+    	borra del sistema de ficheros:
+    </p>
+            <pre class="programlisting">int remove(char *filename);</pre>
+            <p xml:lang="es" lang="es">
+      Esta función devuelve <code class="code">0</code> si el fichero pudo eliminarse 
+      correctamente; si no, devuelve otro número.
+    </p>
+            <p xml:lang="es" lang="es">
+      La función <code class="code">rename</code>, que renombra un fichero, teniendo
+      además la posibilidad de poder moverlo entre directorios si en
+      el argumento <code class="code">newname</code> ponemos una ruta en vez de sólo un 
+      nombre de fichero:
+    </p>
+            <pre class="programlisting">int rename(const char *oldname, const char *newname);</pre>
+            <p xml:lang="es" lang="es">
+       Esta función devuelve <code class="code">0</code> si el fichero pudo renombrarse 
+       correctamente; si no, devuelve otro número. Si falla por cualquier razón,
+       el fichero original no se ve afectado.
+    </p>
+          </div>
+          <div class="section" title="6. Autoevaluación automática">
+            <div class="titlepage">
+              <div>
+                <div>
+                  <h2 class="title" id="id20409930">6. <span xml:lang="es" lang="es">Autoevaluación automática</span>
+    </h2>
+                </div>
+              </div>
+            </div>
+            <p xml:lang="es" lang="es">Comprueba con estas preguntas que has entendido cómo
+    se trabaja con ficheros.</p>
+            <div class="orderedlist">
+              <ol>
+                <li class="listitem">
+                  <p xml:lang="es" lang="es"> ¿Qué hace la siguiente expresión?: </p>
+                  <pre class="programlisting">fopen(“text.bin”, r+b);</pre>
+                  <script src="./Lectura y escritura de ficheros_files/quizconfig.js.descarga"></script>
+                  <form method="POST" class="adagio_embedded_quiz" name="FilesDef_quiz_1" id="FilesDef_quiz_1">
+                    <div class="itemizedlist adagio_quiz_question">
+                      <ul class="itemizedlist" style="list-style-type: none; padding: 0; margin-left: 2em;">
+                        <li class="listitem" style="min-height: 2.3em; background-image: none;         background-repeat: no-repeat; background-position: 0 0;        padding-left: 2.5em;">
+                          <p><input type="radio" name="question1" value="YES">Abre un fichero existente para lectura y escritura.</p>
+                        </li>
+                        <li class="listitem" style="min-height: 2.3em; background-image: none;         background-repeat: no-repeat; background-position: 0 0;        padding-left: 2.5em;">
+                          <p><input type="radio" name="question1" value="NO">Crea un fichero binario para lectura y escritura.</p>
+                        </li>
+                        <li class="listitem" style="min-height: 2.3em; background-image: none;         background-repeat: no-repeat; background-position: 0 0;        padding-left: 2.5em;">
+                          <p><input type="radio" name="question1" value="NO">Abre un fichero existente para lectura y añadir datos al final.</p>
+                        </li>
+                        <li class="listitem" style="min-height: 2.3em; background-image: none;         background-repeat: no-repeat; background-position: 0 0;        padding-left: 2.5em;">
+                          <p><input type="radio" name="question1" value="NO">Crea un fichero binario para lectura y añadir datos al final.</p>
+                        </li>
+                        <li class="listitem" style="min-height: 2.3em; background-image: none;         background-repeat: no-repeat; background-position: 0 0;        padding-left: 2.5em;">
+                          <p><input type="radio" name="question1" value="NO">Ninguna de las anteriores.</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="adagio_embedded_quiz_buttons">
+                      <input type="button" name="B1" onclick="gradeit(&#39;FilesDef_quiz_1&#39;,&#39;../../CSS/&#39;)" value="Corregir">
+                      <input style="display: none;" type="button" name="B2" onclick="resetit(&#39;FilesDef_quiz_1&#39;)" value="De nuevo">
+                      <input style="display: none;" type="button" name="B3" onclick="showit(&#39;FilesDef_quiz_1&#39;,&#39;../../CSS/&#39;)" value="Soluciones">
+                    </div>
+                    <iframe src="./Lectura y escritura de ficheros_files/saved_resource.html" style="display: none; width: 0px; height:0px" name="FilesDef_quiz_1_response" id="FilesDef_quiz_1_response"></iframe>
+                  </form>
+                </li>
+                <li class="listitem">
+                  <p xml:lang="es" lang="es">Hay algo que está mal en este trozo de código, ¿qué es?:</p>
+                  <pre class="programlisting">1    FILE *fptr;
+2    char b = ‘b’;
+3    char *c = &amp;b;
+4    if (fptr = fopen(“file.txt”, “r”))!= NULL) 
+5    {
+6      while(!feof(fptr)) 
+7      {
+8          fwrite(c, sizeof(char),1,fptr)
+9          printf(“Character: %c”,*c);
+10     }
+11     fclose(fptr);
+12   } </pre>
+                  <script src="./Lectura y escritura de ficheros_files/quizconfig.js.descarga"></script>
+                  <form method="POST" class="adagio_embedded_quiz" name="FilesDef_quiz_2" id="FilesDef_quiz_2">
+                    <div class="itemizedlist adagio_quiz_question">
+                      <ul class="itemizedlist" style="list-style-type: none; padding: 0; margin-left: 2em;">
+                        <li class="listitem" style="min-height: 2.3em; background-image: none;         background-repeat: no-repeat; background-position: 0 0;        padding-left: 2.5em;">
+                          <p><input type="radio" name="question1" value="NO">Pase lo que pase en la apertura del fichero, siempre 
+        se tiene que cerrar, así que la llamada a la función <code class="code">fclose(fptr)</code> 
+        de la línea 11 debería ir fuera de la sentencia <code class="code">if</code>, después 
+        de la línea 11.</p>
+                        </li>
+                        <li class="listitem" style="min-height: 2.3em; background-image: none;         background-repeat: no-repeat; background-position: 0 0;        padding-left: 2.5em;">
+                          <p><input type="radio" name="question1" value="NO">Las funciones de lectura/escritura (<code class="code">fread/fwrite</code>) 
+        necesitan como primer parámetro la dirección de la variable donde se va a leer o escribir información, 
+        así que la sentencia correcta de la línea 8 es <code class="code">fwrite(&amp;c, sizeof(char),1,fptr);</code></p>
+                        </li>
+                        <li class="listitem" style="min-height: 2.3em; background-image: none;         background-repeat: no-repeat; background-position: 0 0;        padding-left: 2.5em;">
+                          <p><input type="radio" name="question1" value="NO">La función <code class="code">printf</code> necesita la dirección de 
+        la variable de tipo <code class="code">char</code>, no el valor, así que la sentencia 
+        correcta de la línea 9 es <code class="code">printf(“Character: %c”,c);</code></p>
+                        </li>
+                        <li class="listitem" style="min-height: 2.3em; background-image: none;         background-repeat: no-repeat; background-position: 0 0;        padding-left: 2.5em;">
+                          <p><input type="radio" name="question1" value="YES">Se está intentando escribir en un fichero que sólo se ha abierto para lectura.</p>
+                        </li>
+                        <li class="listitem" style="min-height: 2.3em; background-image: none;         background-repeat: no-repeat; background-position: 0 0;        padding-left: 2.5em;">
+                          <p><input type="radio" name="question1" value="NO">El código es correcto, no hay nada mal.</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="adagio_embedded_quiz_buttons">
+                      <input type="button" name="B1" onclick="gradeit(&#39;FilesDef_quiz_2&#39;,&#39;../../CSS/&#39;)" value="Corregir">
+                      <input style="display: none;" type="button" name="B2" onclick="resetit(&#39;FilesDef_quiz_2&#39;)" value="De nuevo">
+                      <input style="display: none;" type="button" name="B3" onclick="showit(&#39;FilesDef_quiz_2&#39;,&#39;../../CSS/&#39;)" value="Soluciones">
+                    </div>
+                    <iframe src="./Lectura y escritura de ficheros_files/saved_resource(1).html" style="display: none; width: 0px; height:0px" name="FilesDef_quiz_2_response" id="FilesDef_quiz_2_response"></iframe>
+                  </form>
+                </li>
+                <li class="listitem">
+                  <p xml:lang="es" lang="es">Abres el fichero <code class="code">fptr</code>, que ocupa 100 bytes. 
+    ¿Cuál de las siguientes sentencias son equivalentes?</p>
+                  <script src="./Lectura y escritura de ficheros_files/quizconfig.js.descarga"></script>
+                  <form method="POST" class="adagio_embedded_quiz" name="FilesDef_quiz_3" id="FilesDef_quiz_3">
+                    <div class="itemizedlist adagio_quiz_question">
+                      <ul class="itemizedlist" style="list-style-type: none; padding: 0; margin-left: 2em;">
+                        <li class="listitem" style="min-height: 2.3em; background-image: none;         background-repeat: no-repeat; background-position: 0 0;        padding-left: 2.5em;"><p><input type="radio" name="question1" value="NO"><code class="code">rewind(fptr);</code></p>&nbsp;&nbsp;&nbsp;<code class="code">fseek(fptr,-0L, SEEK_END);</code></li>
+                        <li class="listitem" style="min-height: 2.3em; background-image: none;         background-repeat: no-repeat; background-position: 0 0;        padding-left: 2.5em;"><p><input type="radio" name="question1" value="NO"><code class="code">rewind(fptr);</code></p>&nbsp;&nbsp;&nbsp;<code class="code">fseek(fptr,100L, SEEK_END);</code></li>
+                        <li class="listitem" style="min-height: 2.3em; background-image: none;         background-repeat: no-repeat; background-position: 0 0;        padding-left: 2.5em;"><p><input type="radio" name="question1" value="YES"><code class="code">rewind(fptr);</code></p>&nbsp;&nbsp;&nbsp;<code class="code">fseek(fptr,0L, SEEK_CUR);</code></li>
+                        <li class="listitem" style="min-height: 2.3em; background-image: none;         background-repeat: no-repeat; background-position: 0 0;        padding-left: 2.5em;"><p><input type="radio" name="question1" value="NO"><code class="code">rewind(fptr);</code></p>&nbsp;&nbsp;&nbsp;<code class="code">fseek(fptr,-100L, SEEK_SET);</code></li>
+                        <li class="listitem" style="min-height: 2.3em; background-image: none;         background-repeat: no-repeat; background-position: 0 0;        padding-left: 2.5em;">
+                          <p><input type="radio" name="question1" value="NO">Todas las anteriores son equivalentes.</p>
+                        </li>
+                        <li class="listitem" style="min-height: 2.3em; background-image: none;         background-repeat: no-repeat; background-position: 0 0;        padding-left: 2.5em;">
+                          <p><input type="radio" name="question1" value="NO">Ninguna de las anteriores.</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="adagio_embedded_quiz_buttons">
+                      <input type="button" name="B1" onclick="gradeit(&#39;FilesDef_quiz_3&#39;,&#39;../../CSS/&#39;)" value="Corregir">
+                      <input style="display: none;" type="button" name="B2" onclick="resetit(&#39;FilesDef_quiz_3&#39;)" value="De nuevo">
+                      <input style="display: none;" type="button" name="B3" onclick="showit(&#39;FilesDef_quiz_3&#39;,&#39;../../CSS/&#39;)" value="Soluciones">
+                    </div>
+                    <iframe src="./Lectura y escritura de ficheros_files/saved_resource(2).html" style="display: none; width: 0px; height:0px" name="FilesDef_quiz_3_response" id="FilesDef_quiz_3_response"></iframe>
+                  </form>
+                </li>
+                <li class="listitem">
+                  <p xml:lang="es" lang="es">Abres el fichero <code class="code">fptr</code>. Comienzas a leer byte a byte. 
+    Al leer todos los datos y llegar al final, ¿cuál de estas sentencias es correcta?</p>
+                  <script src="./Lectura y escritura de ficheros_files/quizconfig.js.descarga"></script>
+                  <form method="POST" class="adagio_embedded_quiz" name="FilesDef_quiz_4" id="FilesDef_quiz_4">
+                    <div class="itemizedlist adagio_quiz_question">
+                      <ul class="itemizedlist" style="list-style-type: none; padding: 0; margin-left: 2em;">
+                        <li class="listitem" style="min-height: 2.3em; background-image: none;         background-repeat: no-repeat; background-position: 0 0;        padding-left: 2.5em;">
+                          <p><input type="radio" name="question1" value="NO">El indicador de posición de fichero permanece al comienzo 
+        del fichero; sólo se puede mover con las funciones <code class="code">rewind</code> ó 
+        <code class="code">fseek</code>.</p>
+                        </li>
+                        <li class="listitem" style="min-height: 2.3em; background-image: none;         background-repeat: no-repeat; background-position: 0 0;        padding-left: 2.5em;">
+                          <p><input type="radio" name="question1" value="YES">El indicador de posición de fichero está situado al 
+        final del fichero; se ha ido moviendo byte a byte, conforme se iba leyendo.</p>
+                        </li>
+                        <li class="listitem" style="min-height: 2.3em; background-image: none;         background-repeat: no-repeat; background-position: 0 0;        padding-left: 2.5em;">
+                          <p><input type="radio" name="question1" value="NO">El indicador de posición de fichero permanece al 
+        comienzo del fichero; sólo se va moviendo cuando escribimos en un 
+        fichero, no cuando leemos de él.</p>
+                        </li>
+                        <li class="listitem" style="min-height: 2.3em; background-image: none;         background-repeat: no-repeat; background-position: 0 0;        padding-left: 2.5em;">
+                          <p><input type="radio" name="question1" value="NO">Ninguna de las anteriores.</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="adagio_embedded_quiz_buttons">
+                      <input type="button" name="B1" onclick="gradeit(&#39;FilesDef_quiz_4&#39;,&#39;../../CSS/&#39;)" value="Corregir">
+                      <input style="display: none;" type="button" name="B2" onclick="resetit(&#39;FilesDef_quiz_4&#39;)" value="De nuevo">
+                      <input style="display: none;" type="button" name="B3" onclick="showit(&#39;FilesDef_quiz_4&#39;,&#39;../../CSS/&#39;)" value="Soluciones">
+                    </div>
+                    <iframe src="./Lectura y escritura de ficheros_files/saved_resource(3).html" style="display: none; width: 0px; height:0px" name="FilesDef_quiz_4_response" id="FilesDef_quiz_4_response"></iframe>
+                  </form>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="adagio_page_footer"><a xmlns="" href="http://www.uc3m.es/">© Universidad Carlos III de Madrid</a> | 
+    <a xmlns="" id="cc_license_icon" href="http://creativecommons.org/licenses/by-nc-sa/3.0/es/">Licencia Creative
+	Commons</a></div>
+    </div>
+  
+
+</body></html>

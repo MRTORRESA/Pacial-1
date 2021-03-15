@@ -1,0 +1,671 @@
+/*
+ * Generic style file for Course Web Pages 
+ * ADA: Agile Distributed Authoring. A set of rules to produce/combine resources
+ * Copyright (C) 2008 Abelardo Pardo, Carlos III University of Madrid
+
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor
+ * Boston, MA  02110-1301, USA.
+ * 
+ * Author: Abelardo Pardo (abelardo.pardo@uc3m.es)
+ *
+ */
+
+/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/*                                 HEADER                                     */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */
+#adagio_page_header_level1,
+#adagio_page_navigation 
+{ 
+  border-bottom: 0;
+}
+
+#adagio_page_header_level1 
+{
+  background-color: #E6E6F5;
+  background-image: url(HeadGradient.png); 
+  background-repeat: repeat-x;
+  height: 80px;
+  margin-top: 0em;
+  }
+
+#adagio_page_header_level1 h1 
+{ 
+  display: block;
+  margin-top: 0.25em;
+  margin-left: 0.25em;
+  padding: 0.5em 0 0 0.5em;
+  width: 460px;
+  height: 70px;
+  }
+
+#adagio_page_header_level1 > h1 > a
+{
+  border: 0 none;
+  cursor: pointer;
+  display: block;
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+  padding: 70px 0 0;
+  width: 425px;
+}
+
+#adagio_page_header_level2,
+#adagio_page_header_level3,
+#adagio_page_header_level4
+{ 
+  display: none;
+  }
+
+#adagio_page_navigation 
+{ 
+  background-color: #e6e6f5;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  text-align: right;
+  }
+
+#adagio_page_navigation > ul,
+#colophon_compliance > ul
+{ 
+  border-collapse: collapse;
+  display: inline;
+  list-style-image: none;
+  list-style-type: none;
+  padding: 0 1em 0 0;
+  text-decoration: none;
+  }
+
+#adagio_page_navigation > ul > li,
+#colophon_compliance > ul > li
+{
+  border-left: thin solid black;
+  border-collapse: collapse;
+  display: inline;
+  font-size: 85%;
+  padding: 0 0.5em 0 0.5em;
+  } 
+
+/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/*                                 FOOTER                                     */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */
+#adagio_page_footer 
+{ 
+  background-color: #e6e6f5;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: -0.6em;
+  border-top: thin solid #a7a7dc;
+  border-bottom: thin solid #a7a7dc;
+  padding: 0.5em 0 0.5em 0;
+  }
+
+#footer_linksA 
+{ 
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0.3em auto;
+  }
+
+#footer_linksA_list 
+{ 
+  display: table-row;
+  list-style-type: none;
+  list-style-image: none;
+  text-decoration: none;
+  }
+
+#footer_linksA_list li 
+{ 
+  display: table-cell;
+  font-size: 85%;
+  padding: 0 1em 0 1em;
+  border-left: thin solid black;
+  border-right: thin solid black;
+  }
+
+#footer_linksB 
+{
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0.3em auto 0.3em;
+  }
+
+#footer_linksB_list 
+{ 
+  display: table-row;
+  list-style-type: none;
+  list-style-image: none;
+  text-decoration: none;
+  }
+
+#footer_linksB_list li 
+{ 
+  display: table-cell;
+  font-size: 85%;
+  margin: 0.25em;
+  padding: 0.1em 0.5em;
+  }
+
+#cc_license_icon
+{
+  background-image: url(by-nc-sa.png); 
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 85px;
+}
+
+#colophon_compliance
+{
+  margin: 0.5em 0 0.3em 0;
+  font-size: 1.0em;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/*                                 BODY                                       */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */
+body 
+{ 
+  color: Black;
+  background: #FFFFFF;
+  font-size: 100%;
+  font-family: Verdana, "Lucida Grande", "Lucida Sans", "Trebuchet MS", Tahoma, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  line-height: 1.5em;
+}
+
+.discreet 
+{ 
+  font-size: 65%;
+  font-weight: normal;
+  line-height: 1.0em;
+  margin: 0.4em 0 0 0.4em;
+  }
+
+.strong
+{
+    font-weight: bold;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/*                          CONTENT DIV                                       */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */
+#adagio_body_container
+{
+  margin-top: -1.2em;
+}
+
+#adagio_page_content 
+{ 
+  max-width: 70em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  }
+
+/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/*                                  MISC                                      */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */
+.toc 
+{
+  background-color: #EFF8F8;
+  border: thin dotted #70AAE5;
+  color: #000000;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.head-center,
+div.chapter > div.titlepage h2.title,
+h2.subtitle,
+h3.subtitle,
+h1.title { 
+  text-align: center;
+ }
+
+div.loweralpha > ol
+{ 
+  list-style-type: lower-alpha;
+}
+
+div.upperalpha > ol
+{ 
+  list-style-type: upper-alpha;
+}
+
+div#submission_date > h2 
+{ 
+  text-align: center;
+ }
+
+div#handin_link
+{ 
+  text-align: center;
+  border-bottom: thin solid black;
+  }
+
+div#submission_date
+{ 
+  border-bottom: thin solid black;
+}
+
+.informalfigure,
+.figure
+{ 
+  text-align: center;
+ }
+
+.informaltable,
+.table
+{ 
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+.informaltable > table,
+.table table
+{ 
+  border: thin solid black; 
+  border-collapse: collapse;
+ }
+
+.table table th,
+.table table td,
+.informaltable > table th,
+.informaltable > table td
+{ 
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border: thin solid black;
+ }
+
+.middle_img img {
+  border:0;
+  vertical-align: middle;
+  padding: 0 0.2em 0 0.2em;
+}
+
+/* Light blue */
+.table_colored_cell_1
+{
+  background-color: #e6e6f5;
+}
+
+/* Yellow */
+.table_colored_cell_2
+{
+  background-color: #ffff00;
+}
+
+/* Green */
+.table_colored_cell_3
+{
+  background-color: #b3ff80;
+}
+
+.table_colored_cell_3
+{
+  background-color: #ddff55;
+}
+
+.table_colored_cell_4
+{
+  background-color: #decd87;
+}
+
+.table_colored_cell_5
+{
+  background-color: #80ffe6;
+}
+
+.table_colored_cell_5
+{
+  background-color: #aaccff;
+}
+
+.table_colored_cell_6
+{
+  background-color: #ccaaff;
+}
+
+.table_colored_cell_7
+{
+  background-color: #c4b7c8;
+}
+
+.table_colored_cell_8
+{
+  background-color: #ffaacc;
+}
+
+.table_colored_cell_9
+{
+  background-color: #ffccaa;
+}
+
+.video_link a
+{
+  background-image: url(video_20x20.png); 
+  padding-left: 23px;
+}
+
+span.contact_info_link a
+{
+  background-image: url(magnifying_glass_01_16x16.png); 
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 18px;
+}
+
+
+div.meeting > div.titlepage > div > div 
+{
+  background-image: url(meeting_40x40.png); 
+  background-repeat: no-repeat;
+  background-position: left center;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 43px;
+}
+
+div.course_resources > div.titlepage > div > div  
+{
+  background-image: url(books_40x40.png); 
+  background-repeat: no-repeat;
+  background-position: left center;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 43px;
+}
+
+div.agenda > div.titlepage > div > div  
+{
+  background-image: url(agenda_40x40.png); 
+  background-repeat: no-repeat;
+  background-position: left center;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 43px;
+}
+
+div.people > div.titlepage > div > div  
+{
+  background-image: url(people_40x40.png); 
+  background-repeat: no-repeat;
+  background-position: left center;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 43px;
+}
+
+div.computer > div.titlepage > div > div  
+{
+  background-image: url(computer1_40x40.png); 
+  background-repeat: no-repeat;
+  background-position: left center;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+}
+
+div.titlepage 
+{
+  color: #00007A;
+}
+
+div#header_links
+{
+  text-align: center;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+div#header_links > p.cronometro,
+div.cronometro > div.titlepage > div > div  
+{
+  background-image: url(cronometro_40x40.png); 
+  background-repeat: no-repeat;
+  background-position: left center;
+  display: table;
+  padding-left: 40px;
+  line-height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.section > div.titlepage > div > div > h2,
+div.section > div.titlepage > div > div > h3
+{
+  border-bottom: thin solid black;
+}
+
+div.objectives > div.titlepage > div > div > h3,
+div.resources > div.titlepage > div > div > h3,
+div.workplan > div.titlepage > div > div > h3,
+div.evaluation > div.titlepage > div > div > h3
+{
+  border-bottom: 0;
+}
+
+/* div[class='note professorguide'],
+div[class='note solution'] */
+div[class~='note']
+{
+  border: thin solid black;
+  padding: 0 0.5em 0 0.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* div[class='note professorguide'] h3.title,
+div[class='note solution'] h3.title */
+div[class~='note'] h3.title
+{
+  text-align: center;
+  margin-top: 0;
+  margin-bottom:0;
+}
+
+.head_reverse
+{
+  color: white;
+  background-color: black;
+  text-align: center;
+}
+
+.head_green 
+{ 
+  background-color: #00FF00;
+  }
+
+.head_light_blue
+{ 
+  background-color: #80E5FF;
+  }
+
+.head_yellow
+{ 
+  background-color: #FFFF00;
+  }
+
+.head_red
+{ 
+  background-color: #FF0000;
+  }
+
+.tabledata_grey,
+td.lablecture
+{  
+  background-color: #E6E6E6;
+}
+
+p.adagio_countdown
+{ 
+  text-align: center;
+  font-weight: bold;
+ }
+
+.adagio_submit_button,
+div.adagio_submit_form_textarea
+{ 
+  text-align: center;
+ }
+
+div.adagio_submit_form_duration_select
+{
+  margin-top: 0.5em;
+  text-align: right;
+}
+
+div.activity div.objectives > div.titlepage,
+div.activity div.resources > div.titlepage,
+div.activity div.evaluation > div.titlepage,
+div.activity div.workplan > div.titlepage
+{
+  background-repeat: no-repeat;
+  background-position: left center;
+  display: table-cell;
+  padding-left: 45px;
+  height: 40px;
+}
+
+div.activity div.objectives > div.titlepage
+{
+  background-image: url(objectives_40x40.png); 
+}
+
+div.activity div.resources > div.titlepage
+{
+  background-image: url(books_40x40.png); 
+}
+
+div.activity div.workplan > div.titlepage
+{
+  background-image: url(desktop_40x40.png); 
+}
+
+div.activity div.evaluation > div.titlepage
+{
+  background-image: url(cronometro_40x40.png); 
+}
+
+h3.author
+{
+  text-align: center;
+}
+
+/* Generic code fragment */
+pre.programlisting,
+/* Paragraph with role withborder */
+p.withborder
+{
+  font-family: "Courier New", Courier, monospace;
+  font-size: 100%;
+  border: thin solid black;
+  display: table;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Code fragment as answer to a quiz, do not center */
+div.adagio_quiz_question ul li pre.programlisting
+{
+  margin-left: 0;
+}
+
+code
+{
+  font-family: "Courier New", Courier, monospace;
+  font-size: 120%;
+}
+
+div.adagio_swf_video,
+div.adagio_if_video
+{
+  text-align: center;
+}
+
+div.blockquote
+{
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/* Code fragment inside a table cell */
+td pre.programlisting
+{
+    border: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+/* Blockquotations flushed right */
+table.blockquote div
+{
+    text-align: right;
+}
+
+/* Links to previous and inclass activities */
+.previouslink,
+.inclasslink
+{
+    font-weight: bold;
+}
+
+/* Center vertically all inlinemediaobjects */
+.inlinemediaobject img
+{
+    vertical-align: middle;
+}
+
+.emphasis {
+  /* text-decoration: underline; */
+  font-weight: bold;
+}
+k
+/* Hide elements of class noprint when printing */
+@media print {
+}
